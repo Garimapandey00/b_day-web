@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fdf2f8 0%, #fefce8 100%); /* Pink to Yellow fun vibe */
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+}
+
+.blob, .blob2 {
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    background: #fbcfe8;
+    filter: blur(120px);
+    z-index: -1;
+    border-radius: 50%;
+}
+.blob2 { background: #fef08a; right: -50px; top: -50px; } /* Fun yellow blob */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.5rem;
+    color: #be185d;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #701a75;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 200px;
+}
+
+.polaroid-frame {
+    background: white;
+    padding: 12px 12px 40px 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: translateY(60px) rotate(-2deg);
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+.polaroid-frame:nth-child(even) { transform: translateY(60px) rotate(2deg); }
+
+.polaroid-frame img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.polaroid-frame p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 15px;
+    color: #be185d;
+}
+
+.letter-section {
+    min-height: 100vh;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.glass-letter {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 50px 30px;
+    border-radius: 40px;
+    max-width: 600px;
+    text-align: center;
+    border: 3px dashed #fbcfe8;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+.message-text p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.footer-heart {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: #db2777;
+    margin-top: 30px;
+}
+
+.appear {
+    opacity: 1 !important;
+    transform: translateY(0) rotate(var(--rot, 0deg)) !important;
+}
